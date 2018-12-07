@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { ExpenseDetailComponent } from './expense-detail/expense-detail.component';
 import { ExpenseItemComponent } from './expense-detail/expense-item/expense-item.component';
 import { AddExpenseComponent } from './add-expense/add-expense.component';
+import {FormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AddExpenseComponent } from './add-expense/add-expense.component';
     AddExpenseComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

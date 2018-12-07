@@ -1,3 +1,15 @@
-<p>
-  add-expense works!
-</p>
+<div class="container">
+<div class="col-xs-12">
+<label >Expense Name</label>
+<input type="text" id="name" class="form-control" [(ngModel)]="expense.name">
+<input type="text" id="name" class="form-control" [(ngModel)]="expense.qty">
+<label>{{name}}</label>
+<button class="btn btn-primary" (click)="onExpenseAdded()">
+
+  Anhadir Expense
+</button>
+
+</div>
+
+
+</div>
