@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'rhinoAngular';
+  menuSelected:string;
+  onMenuChange(menuSelected: string){
+   this.menuSelected = menuSelected;
+
+  }
 }
