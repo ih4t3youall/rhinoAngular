@@ -7,6 +7,7 @@ import { ExpenseDetailComponent } from './expense-detail/expense-detail.componen
 import { ExpenseItemComponent } from './expense-detail/expense-item/expense-item.component';
 import { AddExpenseComponent } from './add-expense/add-expense.component';
 import {FormsModule} from '@angular/forms'
+import { ExpenseService } from './services/expense.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import {FormsModule} from '@angular/forms'
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ExpenseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

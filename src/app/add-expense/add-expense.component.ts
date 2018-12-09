@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, Input, Output, EventEmitter } from '@angular/core';
 import { Expense } from '../expense.model';
+import { ExpenseService } from '../services/expense.service';
 
 @Component({
   selector: 'app-add-expense',
@@ -11,9 +12,9 @@ export class AddExpenseComponent implements OnInit {
   expense: Expense;
   @Output() expenseAdded = new EventEmitter<Expense>();
 
-  constructor() {
+  constructor(private expenseService:ExpenseService) {
     //    this.expense = new Expense("nose",3);
-    this.expense = new Expense("", 0);
+    this.expense = new Expense(0,"", 0);
   }
 
   ngOnInit() {
@@ -22,8 +23,8 @@ export class AddExpenseComponent implements OnInit {
     if (this.expense.name == "" || this.expense.qty <= 0) {
       console.log("nain")
     } else {
-      console.log("emit");
-      this.expenseAdded.emit(this.expense);
+      console.log("Added to service");
+      this.expenseService.addExpense(this.expense);
     }
 
 

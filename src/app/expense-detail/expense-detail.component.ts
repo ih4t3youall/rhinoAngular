@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, Input} from '@angular/core';
 import { Expense } from '../expense.model';
+import { ExpenseService } from '../services/expense.service';
 
 @Component({
   selector: 'app-expense-detail',
@@ -9,12 +10,11 @@ import { Expense } from '../expense.model';
 export class ExpenseDetailComponent implements OnInit {
 
 
- // expenses:Expense [] =[
- //   new Expense("nombre",1),
- //   new Expense("nombre2",2)
- // ];
-@Input() expensesElements:Expense [] = [];
-  constructor() { }
+ expensesElements:Expense [] = [];
+
+  constructor(private expenseService:ExpenseService) { 
+    this.expensesElements = this.expenseService.expenses
+  }
 
   ngOnInit() {
   }

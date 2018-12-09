@@ -5,14 +5,14 @@
 </div>
 <div class="container">
   <div class="col-xs-12">
-<app-expense-detail *ngIf="menuSelected === 'showExpense'" [(expensesElements)]="expenses"> 
+<app-expense-detail *ngIf="menuSelected === 'showExpense'" > 
 <!-- <app-expense-detail  [(expensesElements)]="expenses">--> 
    </app-expense-detail> 
   </div>
 </div>
 <div class="container">
   <div class="col-xs-12">
-<app-add-expense *ngIf="menuSelected === 'addExpense'" (expenseAdded)="expenseAdded($event)">
+<app-add-expense *ngIf="menuSelected === 'addExpense'" >
 <!-- <app-add-expense  (expenseAdded)="expenseAdded($event)">-->
    </app-add-expense> 
   </div>

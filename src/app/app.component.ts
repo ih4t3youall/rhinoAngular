@@ -17,10 +17,5 @@ export class AppComponent {
    this.menuSelected = menuSelected;
 
   }
-expenseAdded(expense:Expense){
-  console.log(expense.name);
-  console.log(expense.qty);
-  this.expenses.push(expense);
-  console.log("lenght: "+this.expenses.length);
-}
+
 }
