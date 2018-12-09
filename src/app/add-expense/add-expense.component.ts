@@ -22,6 +22,7 @@ export class AddExpenseComponent implements OnInit {
     if (this.expense.name == "" || this.expense.qty <= 0) {
       console.log("nain")
     } else {
+      console.log("emit");
       this.expenseAdded.emit(this.expense);
     }
 
