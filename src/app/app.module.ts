@@ -21,7 +21,7 @@ import { ExpenseService } from './services/expense.service';
     BrowserModule,
     FormsModule
   ],
-  providers: [ExpenseService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

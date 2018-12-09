@@ -1,5 +1,7 @@
 import { Expense } from '../expense.model';
+import { Injectable } from '@angular/core';
 
+@Injectable({providedIn:'root'})
 export class ExpenseService{
 
     expenses:Expense [] = [];
